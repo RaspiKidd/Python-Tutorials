@@ -34,4 +34,39 @@ We can now code our LED to do something.
 
 1. Open up your favourite Python Editor. I will be using Mu through this tutorial as it is a beginner friendly editor.
 
-2.  
+2. Type the following code:
+
+   ```python
+   from gpiozero import LED
+
+   led = LED(18)
+
+   led.on ()
+   ```
+
+   This will import the LED module from the gpiozero library. Set the LED at pin 18 making it programmable and then turn the LED on.
+
+3. Click on Run
+
+4. If you have typed the code above correctly you should now see the LED turn on
+
+### Turning an LED Off
+
+Change the line ```led.on ()``` to ```led.off ()```
+
+### Making an LED Blink
+
+Under the line ```from gpiozero import LED`` Type ``` from ```time import sleep```
+
+Delete the ```led.off ()`` and type the following:
+``` Python
+while True:
+    led.on ()
+    sleep (1)
+    led.off ()
+    sleep (1)
+```
+
+You now know how to control an LED.
+
+Why don't you adjust the number after the sleep block and see what happens.
