@@ -4,7 +4,7 @@ Within this tutorial you are going to learn how to create a simple circuit and u
 
 ## What You Will Need
 
-The equipment you need is;
+The equipment you need is:
 
 * 1 x LED
 * 2 x Male to Female jumper wires
@@ -32,7 +32,7 @@ We can now code our LED to do something.
 
 ### Turning The LED On
 
-1. Open up your favourite Python Editor. I will be using Mu through this tutorial as it is a beginner friendly editor.
+1. Open up your favourite Python Editor. I will be using Mu through this tutorial as it is a beginner friendly editor. If you do not have Mu installed you can find out how to install it here.
 
 2. Type the following code:
 
