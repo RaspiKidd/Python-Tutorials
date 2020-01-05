@@ -58,7 +58,7 @@ Change the line ```led.on ()``` to ```led.off ()```
 
 Under the line ```from gpiozero import LED`` Type ``` from ```time import sleep```
 
-Delete the ```led.off ()`` and type the following:
+Delete the ```led.off ()``` and type the following:
 ``` Python
 while True:
     led.on ()
