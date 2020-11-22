@@ -4,156 +4,149 @@
 
 Learn how to use the LED matrix on the micro:bit which can be used as a screen to output data.
 
-We are going to explore how to use the LED matrix with EduBlocks.
+We are going to explore how to use the LED matrix with Python.
 
  ---
  **NOTE:** You will need to a micro:bit to complete this tutorial.
 
 ---
 
-## Starting EduBlocks
+## Starting Python
 
 1. Open your favourite web browser(we recommend Google Chrome)
-2. Within the address bar type[app.edublocks.org](app.edublocks.org)
-3. Click on micro:bit.
+2. Within the address bar type [python.microbit.org](https://python.microbit.org/v/2.0)
 
-## Code Blocks
+## Pairing your micro:bit
+1. Click on Connect
+2. Click on your micro:bit and click connect.
 
-These are the blocks that we can use to control the LED matrix.
+## Code Snippets
 
-1. **Display.scroll("Hello World")**
-![Display Text](Images/DisplayText.png) This does exactly what it says and scrolls text on the LED matrix.
+These are the pieces of code that we can use to control the LED matrix.
 
-2. **display.scroll(0)**
-![Display Number](Images/DisplayNumber.png) This does exactly as it says and scrolls a number on the LED matrix.
+1. `display.scroll("Hello World")` This does exactly what it says and scrolls text on the LED matrix.
 
-3. **display.scroll(Image.HAPPY)**
-![Display Image](Images/DisplayImage.png) This allows us to display preconfigured images on the LED matrix.
+2. `display.scroll(0)` This does exactly as it says and scrolls a number on the LED matrix.
 
-4. **display.set_Pixel(0,0,5)**
-![Set Pixel](Images/DisplayPixel.png) This lights up one of the LEDs on the matrix by taking a value for the row, column and brightness you want the LED
+3. `display.scroll(Image.HAPPY)` This allows us to display preconfigured images on the LED matrix.
 
-5. **display.off()**
-![Display off](Images/DisplayOff.png) This displays an arrow or compass direction on the LED matrix
+4. `display.set_Pixel(0,0,5)` This lights up one of the LEDs on the matrix by taking a value for the row, column and brightness you want the LED
 
-6. **image**
-![Create an Image](Images/CreateImage.png) This allows you to create your own images by changing the 0's(off) to 5's(on).
+5. `display.off()` This displays an arrow or compass direction on the LED matrix
+
+6. `image = Image("00500:""00000:""50505:""00000:""00500")` This allows you to create your own images by changing the 0's(off) to 5's(on).
 
 ## Displaying Text
 
-1. Click on Basic. Click and drag a from microbit import * block to the code area and drop it.
+1. Type `while True:` and press enter. This will create a loop that will last forever or until you switch your micro:bit off.
 
-2. Click on Basic. Click and drag a while True: block to the code area and attach it under from microbit import *.
+2. Type `display.scroll("Hello World")`. This will make Hello World scroll across the LED matrix.
 
-3. Click on Display. Click and drag a display.scroll("Hello World") block to the code area and attach it within the while True: block.
-
-4. Click where it says "untitled" at the top of the page and give your project a meaningful name. Then click on Save to save your project.
-
-5. Click Download Hex to download your program to your computer.
-
-6. Locate where your micro:bit program downloaded on your computer this will normally be the Downloads folder. Click and drag your program across to your micro:bit to run your program on your micro:bit.
+3. Click on Flash to download and run the code on your micro:bit.
 
 Your code should look like this:
 
-![Display Text Code](Images/DisplayTextCode.png)
+```python
+from microbit import *
+
+while True:
+  display.scroll("Hello World")
+```
 
 ## Displaying Numbers
 
-1. Click on Basic. Click and drag a from microbit import * block to the code area and drop it.
+1. Type `while True:` and press enter. This will create a loop that lasts forever or until you switch your micro:bit off.
 
-2. Click on Basic. Click and drag a while True: block to the code area and attach it under from microbit import *.
+2. Type `display.scroll(7)`. This will make the number 7 display on the LED matrix.
 
-3. Click on Display. Click and drag a display.scroll("0") block to the code area and attach it within the while True: block. Click where it says "0" and choose your own number to scroll on the micro:bit.
-
-4. Click where it says "untitled" at the top of the page and give your project a meaningful name. Then click on Save to save your project.
-
-5. Click Download Hex to download your program to your computer.
-
-6. Locate where your micro:bit program downloaded on your computer this will normally be the Downloads folder. Click and drag your program across to your micro:bit to run your program on your micro:bit.
+3. Click on Flash to download and run the code on your micro:bit.
 
 Your code should look like this:
 
-![Display Numbers Code](Images/DisplayNumberCode.png)
+```python
+from microbit import *
+
+while True:
+  display.scroll(7)
+```
 
 ## Display Image
 
-1. Click on Basic. Click and drag a from microbit import * block to the code area and drop it.
+1. Type `while True:` and press enter. This will create a loop that lasts for ever or until you switch your micro:bit off.
 
-2. Click on Basic. Click and drag a while True: block to the code area and attach it under from microbit import *.
+2. Type `display.show(Image.DUCK)`. This will display a duck on the LED matrix.
 
-3. Click on Display. Click and drag a display.show(Image.HAPPY) block to the code area and attach it within the while True: block. You can change "HAPPY" to various pre-made images. Find a full list of the images here [https://bit.ly/2IaPXI1](https://microbit-micropython.readthedocs.io/en/v1.0.1/image.html#attributes)
-
-4. Click where it says "untitled" at the top of the page and give your project a meaningful name. Then click on Save to save your project.
-
-5. Click Download Hex to download your program to your computer.
-
-6. Locate where your micro:bit program downloaded on your computer this will normally be the Downloads folder. Click and drag your program across to your micro:bit to run your program on your micro:bit.
+3. Click on Flash to download and run the code on your micro:bit.
 
 Your code should look like this:
 
-![Display Image](Images/DisplayImageCode.png)
+```python
+from microbit import *
+
+while True:
+  display.show(Image.DUCK)
+```
 
 ## Set Pixel
 
-1. Click on Basic. Click and drag a from microbit import * block to the code area and drop it.
+1. Type `while True:` and press enter. This will create a loop that lasts forever or until you switch your micro:bit off.
 
-2. Click on Basic. Click and drag a while True: block to the code area and attach it under from microbit import *.
+2. Type `display.set_pixel(2,2,5)` This will make the middle LED light up on the display.
 
-3. Click on Display. Click and drag a display.set_pixel(0,0,5) block to the code area and attach it within the while True: block. You can change the two "0s" to any number up to 4 depending on what LED you want to turn on. We recommend keeping the brightness at 5, but if you want to change this you can pick any number from 0-9.
-
-4. Click where it says "untitled" at the top of the page and give your project a meaningful name. Then click on Save to save your project.
-
-5. Click Download Hex to download your program to your computer.
-
-6. Locate where your micro:bit program downloaded on your computer this will normally be the Downloads folder. Click and drag your program across to your micro:bit to run your program on your micro:bit.
+3. Click on Flash to download and run your code on your micro:bit.
 
 Your Code should look like this:
 
-![Set Pixel Code](Images/DisplayPixelCode.png)
+```python
+from microbit import *
+
+while True:
+  display.set_pixel(2,2,5)
+```
 
 ## Create Image
 
-1. Click on Basic. Click and drag a from microbit import * block to the code area and drop it.
+1. Type `image = Image("00500:""00000:""50505:""00000:""00500")` and press enter. This will create a variable called "image".
 
-2. Click on Display. Click and drag an image=("") block to the code area and attach it under from microbit import *.
+2. Type `while True:` and press enter. This will create a loop that will last for ever or until you switch your micro:bit off.
 
-3. Create your own image by changing the 0s to 5s where you want the LEDs to light up.
+3. Type `display.show(image)`. This will display the image variable we created earlier.
 
-4. Click on Basic. Click and drag a while True: block to the code area and attach it under image=("").
-
-5. Click on Display. Click and drag a display.show() block to the code area and attach it within the while True: block.
-
-6. Click on Variables. Click and drag an image block to the code area and attach it within the display.show block.
-
-7. Click where it says "untitled" at the top of the page and give your project a meaningful name. Then click on Save to save your project.
-
-8. Click Download Hex to download your program to your computer.
-
-9. Locate where your micro:bit program downloaded on your computer this will normally be the Downloads folder. Click and drag your program across to your micro:bit to run your program on your micro:bit.
+4. Click on Flash to download and run the code on your micro:bit.
 
 Your code should look like this:
 
-![Create image code](Images/CreateImageCode.png)
+```python
+from microbit import *
+
+image = Image("00500:""00000:""50505:""00000:""00500")
+
+while True:
+  display.show(image)
+```
 
 ## Turn the Display Off
 
 We are going to re-purpose our code from above and add to it for this next bit of code.
 
-1. Click on Basic. Click and drag a sleep(1000) block to the code area and attach it under the display.show(image) block.
+1. Type `sleep(5000)` and press enter.  This will pause our program for 5 seconds.
 
-2. Click where it says "1000" and change this to "5000". This changes the program from pausing for 1 second to pause 5 seconds.
+2. Type `display.off()`. This will turn the LED matrix off.
 
-3. Click on Display. Click and drag a display.on() block to the code area and attach it under sleep(5000). Click on the little arrow next to on and click on off.
-
-4. Click on the name of the old program and give this one a new name and click on save.
-
-5. Click Download Hex to download your program to your computer.
-
-6. Locate where your micro:bit program downloaded on your computer this will normally be the Downloads folder. Click and drag your program across to your micro:bit to run your program on your micro:bit.
+4. Click on Flash to download and run the code on your micro:bit.
 
 Your code should look like this:
 
-![Display Off Code](Images/DisplayOffCode.png)
+```python
+from microbit import *
+
+image = Image("00500:""00000:""50505:""00000:""00500")
+
+while True:
+  display.show(image)
+  sleep(5000)
+  display.off()
+```
 
 ## Conclusion
 
@@ -161,6 +154,6 @@ We have now learned how to use the LED matrix on the micro:bit
 
 > ## Challenge
 >
-> You now know how to use all the display blocks on their own.
+> You now know how to use all the display code snippets on their own.
 >
 > Why not try and use a few of them together to create your own program.
